@@ -23,5 +23,5 @@ def submitResponse(runid, i, header, adtype, color, productid, price):
     return r.json()
     
     
-#print("This code is executed too")    
-print (getData(1, 1))
+print("This code is executed too")    
+print (getData(2, 2))

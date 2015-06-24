@@ -17,10 +17,12 @@ nris = 5
 sum = 0
 mean = 0
 n = 0
+variance = 10
 
-for runid in range (nrrunids):
-    for i in range (nris):
-        json = serverHandler.getData(runid,id) 
+for runid in range (1, nrrunids):
+    for i in range (1, nris):
+        print ("Running for: {}".format(i))
+        json = getData(runid,i) 
         nextData = json['context']['Age']
         (variance, S, mean, n) = VarianceCalculator.updateSV(nextData, sum, mean, n)
         
